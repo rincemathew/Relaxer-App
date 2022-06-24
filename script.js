@@ -10,15 +10,20 @@ breathAnimation();
 
 function breathAnimation() {
     console.log('Breath In!');
+    text.innerText = 'Breath In!';
+    container.className = 'container grow';
 
     setTimeout(() => {
         console.log('Hold');
+        text.innerText = 'Hold';
 
         setTimeout(() =>{
             console.log('Breathe Out!');
+            text.innerText = 'Breathe Out!';
+            container.className = 'container shrink';
         },holdTime);
 
     }, breathTime);
-
-    
 }
+
+setInterval(breathAnimation, totalTime);
